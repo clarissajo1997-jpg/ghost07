@@ -1,5 +1,11 @@
 const { URL } = require('node:url');
-const { services, appointments, contactMessages } = require('./data/store');
+const {
+  services,
+  priceList,
+  priceListPostText,
+  appointments,
+  contactMessages,
+} = require('./data/store');
 const { validateAppointment, validateContactMessage } = require('./validators');
 
 function json(res, status, payload) {
@@ -61,6 +67,16 @@ async function handler(req, res) {
 
   if (req.method === 'GET' && url.pathname === '/api/services') {
     json(res, 200, { data: services });
+    return;
+  }
+
+  if (req.method === 'GET' && url.pathname === '/api/price-list') {
+    json(res, 200, { data: priceList });
+    return;
+  }
+
+  if (req.method === 'GET' && url.pathname === '/api/price-list/post') {
+    json(res, 200, { data: { text: priceListPostText } });
     return;
   }
 
