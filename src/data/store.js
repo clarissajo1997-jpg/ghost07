@@ -45,6 +45,11 @@ const priceList = {
     { name: 'X-Rays', price: 'RM50++' },
   ],
   cta: 'Contact Us Today!',
+  contact: {
+    phone: '+60163403382',
+    email: 'paulineandngdental@hotmail.com',
+    address: 'NO.39 JALAN USJ 1/1A REGALIA BUSINESS CENTRE 47650 SUBANG JAYA SELANGOR',
+  },
 };
 
 const priceListPostText = [
@@ -71,6 +76,9 @@ const priceListPostText = [
   '• X-Rays — RM50++',
   '',
   'Contact Us Today!',
+  'Phone: +60163403382',
+  'Email: paulineandngdental@hotmail.com',
+  'Address: NO.39 JALAN USJ 1/1A REGALIA BUSINESS CENTRE 47650 SUBANG JAYA SELANGOR',
 ].join('\n');
 
 const appointments = [];

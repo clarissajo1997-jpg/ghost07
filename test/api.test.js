@@ -47,6 +47,7 @@ test('GET /api/price-list/post returns post-ready text', async () => {
   assert.equal(typeof body.data.text, 'string');
   assert.ok(body.data.text.includes('Affordable Care for Your Brightest Smile'));
   assert.ok(body.data.text.includes('Aligners — RM8000++'));
+  assert.ok(body.data.text.includes('Phone: +60163403382'));
 });
 
 test('POST /api/appointments validates service IDs', async () => {
