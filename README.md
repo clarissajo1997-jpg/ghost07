@@ -6,6 +6,7 @@ This repository contains a simple Node.js backend API for the Pauline & NG Denta
 
 - Health endpoint for uptime checks
 - Services endpoint to list clinic services
+- Price list endpoint with post-ready text
 - Appointment request endpoint with validation
 - Contact form endpoint with validation
 - CORS support and JSON responses without external dependencies
@@ -14,6 +15,8 @@ This repository contains a simple Node.js backend API for the Pauline & NG Denta
 
 - `GET /api/health`
 - `GET /api/services`
+- `GET /api/price-list`
+- `GET /api/price-list/post`
 - `GET /api/appointments`
 - `POST /api/appointments`
 - `GET /api/contact`

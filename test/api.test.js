@@ -40,6 +40,15 @@ test('GET /api/services returns seeded services', async () => {
   assert.ok(body.data.length >= 1);
 });
 
+test('GET /api/price-list/post returns post-ready text', async () => {
+  const { response, body } = await request('/api/price-list/post');
+
+  assert.equal(response.status, 200);
+  assert.equal(typeof body.data.text, 'string');
+  assert.ok(body.data.text.includes('Affordable Care for Your Brightest Smile'));
+  assert.ok(body.data.text.includes('Aligners — RM8000++'));
+});
+
 test('POST /api/appointments validates service IDs', async () => {
   const { response, body } = await request('/api/appointments', {
     method: 'POST',
